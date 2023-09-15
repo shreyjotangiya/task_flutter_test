@@ -1,0 +1,34 @@
+name: task_flutter_test
+version: 1.0.0+1
+publish_to: none
+description: flutter_test
+environment: 
+  sdk: '>=3.1.0 <4.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  get: 4.6.6
+  flutter: 
+    sdk: flutter
+  connectivity_plus: ^4.0.2
+  dart_code_metrics_presets: ^2.4.0
+  smooth_page_indicator: ^1.1.0
+  dio: 5.1.2
+
+dev_dependencies: 
+  flutter_lints: ^2.0.0
+  flutter_test: 
+    sdk: flutter
+
+dart_code_metrics:
+  extends:
+    - package:dart_code_metrics_presets/all.yaml
+  rules:
+    - arguments-ordering:
+        child-last: true
+
+flutter: 
+  uses-material-design: true
+  assets:
+    - config/
+    - assets/image/
